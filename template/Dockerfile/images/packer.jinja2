@@ -1,0 +1,31 @@
+{% import 'Dockerfile/docker.jinja2' as docker %}
+
+{% macro alpine(path="/usr/local/bin", version="1.3.3") -%}
+    # Install packer
+    && wget -O "{{ path }}/packer" "https://releases.hashicorp.com/packer/1.3.3/packer_1.3.3_linux_amd64.zip" \
+    && chmod +x "{{ path }}/packer" \
+    && "{{ path }}/packer" --version
+{%- endmacro %}
+
+{% macro centos(path="/usr/local/bin", version="1.3.3") -%}
+    # Install packer
+    && wget -O "{{ path }}/packer" "https://releases.hashicorp.com/packer/1.3.3/packer_1.3.3_linux_amd64.zip" \
+    && chmod +x "{{ path }}/packer" \
+    && "{{ path }}/packer" --version
+{%- endmacro %}
+
+{% macro debian(path="/usr/local/bin", version="1.3.3") -%}
+    # Install packer
+    && wget -O "{{ path }}/packer" "https://releases.hashicorp.com/packer/1.3.3/packer_1.3.3_linux_amd64.zip" \
+    && chmod +x "{{ path }}/packer" \
+    && "{{ path }}/packer" --version
+{%- endmacro %}
+
+{% macro ubuntu(path="/usr/local/bin", version="1.3.3") -%}
+    # Install packer
+    && wget -O "{{ path }}/packer" "https://releases.hashicorp.com/packer/1.3.3/packer_1.3.3_linux_amd64.zip" \
+    && chmod +x "{{ path }}/packer" \
+    && "{{ path }}/packer" --version
+{%- endmacro %}
+
+

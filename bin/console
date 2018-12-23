@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os, sys
+import pdb
 
 # prevent bytecode
 sys.dont_write_bytecode = True
@@ -28,6 +29,9 @@ from command.generate_graph_command import GenerateGraphCommand
 from command.generate_provision_command import GenerateProvisionCommand
 
 if __name__ == '__main__':
+    # Comment out after finish 
+    # pdb.set_trace()
+    
     # Generate common paths
     script_path = os.path.dirname(os.path.realpath(__file__))
     root_path = os.path.dirname(script_path)
